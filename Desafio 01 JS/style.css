@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  display: grid;
+  place-items: center;
+  
+  background-image: linear-gradient(90deg, #190361, #bb00ff, #190361);
+  background-size: 400% 400%;
+  animation: backAnimation 10s linear infinite;
+}
+
+.hide {
+  display: none;
+}
+
+.close {
+  margin: 0 auto;
+  padding: 4.8rem 6.4rem;
+  flex: none;
+  
+  width: 42.8rem;
+  height: 42.4rem;  
+  
+  background: white;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #34355B;
+
+  text-align: center;
+}
+
+.close p {
+  font-weight: 400;
+  font-size: 1.5rem; 
+  text-align: center;
+  margin: 1.4rem 0 2rem 0 ;
+}
+
+.open p {
+  font-family: 'Dancing Script';
+  font-weight: 400;
+  font-size: 2.4rem;
+
+  background: #E4EDF1;
+  box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+  padding: 1rem;
+  
+  margin: 1.7rem 0 6rem 0;
+  text-align: center;
+  color: #000000;
+
+  animation: phrases 2s ease-out;
+}
+.open {
+
+  flex-direction: column;
+  width: 42.8rem;
+
+  padding: 4.8rem 6.4rem;
+
+  background: #FFFFFF;
+  box-shadow: 0px 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
+}
+
+button {
+  font-weight: 700;
+  font-size: 1.5rem;
+  
+  color: #FFFFFF;
+  background: #FF9500;
+  margin: 6rem 6.3rem 0 6.3rem;
+  
+  
+  border-radius: .4rem;
+  padding: 1.6rem;
+  border: none;
+}
+
+button:hover {
+  background: #b16800;
+  cursor: pointer;
+}
+
+#cookieClose:hover {
+  animation: closeAnimation 150ms linear infinite;
+  cursor: pointer;
+}
+
+@keyframes closeAnimation{
+  0%{
+    transform: translateX(2px);
+  }
+  
+  25%{
+    transform: translateY(.2px);
+  }
+  
+  50%{
+    transform: translateX(-2px);
+  }
+  
+  75%{
+    transform: translateY(-2px);
+  }
+  
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+@keyframes backAnimation {
+
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+ 
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+
+  @keyframes phrases {
+    0% {
+      transform: translateY(17rem) scale(0.1);
+    }
+  }
+
+
+    
